@@ -52,11 +52,20 @@ function save_options() {
 
 function restore_options() {
     chrome.storage.sync.get(['leerlingnummer'], function(leerlingnummer){
-        console.log(leerlingnummer)
-        document.querySelector('.leerlingnummer').value = leerlingnummer.leerlingnummer;
+        if (typeof leerlingnummer.leerlingnummer === 'undefined'){
+            document.querySelector('.leerlingnummer').value = ''
+        }
+        else{
+            document.querySelector('.leerlingnummer').value = leerlingnummer.leerlingnummer;
+        }
     })
     chrome.storage.sync.get(['wachtwoord'], function(wachtwoord){
-        document.querySelector('.wachtwoord').value = wachtwoord.wachtwoord;
+        if (typeof wachtwoord.wachtwoord === 'undefined'){
+            document.querySelector('.wachtwoord').value = ''
+        }
+        else{
+            document.querySelector('.wachtwoord').value = wachtwoord.wachtwoord;
+        }
     })
 }
 
