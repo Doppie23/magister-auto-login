@@ -6,10 +6,14 @@
     "permissions": [
     "storage"
     ],
+    "action":{
+        "default_title": "Magister auto login",
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
          "matches": ["http://accounts.magister.net/*","https://accounts.magister.net/*"],
-         "js": ["script.js", "jquery-3.6.1.min.js"]
+         "js": ["script.js"]
         }
        ]
     
