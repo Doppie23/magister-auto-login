@@ -1,31 +1,22 @@
-MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+waitForElm('#username').then(() => {
+  console.log('Element is ready');
+  document.getElementById('username').value = "7661";
+  document.getElementById('username').dispatchEvent(new Event('input'));
 
-var observer = new MutationObserver(function(mutations, observer) {
-    const target = mutations[0].target
-    if (target.matches('html')){
-      console.log('iets')
-      // document.getElementById('username').value = "7661";
-      // document.getElementById('username').dispatchEvent(new Event('input'));
-      // document.getElementById('username_submit').click();
-      
-
-    }
+  waitForElm('#username_submit').then((elm) => {
+    console.log(elm)
+    elm.click();
   });
+});
 
-// waitForElm('#password').then(() => {
-//   console.log('Element is ready');
-//   document.getElementById('password').value = "Dropshot#1";
-//   document.getElementById('password').dispatchEvent(new Event('input'));
-//   document.getElementById('password_submit').click();
+waitForElm('#password').then(() => {
+  console.log('Element is ready');
+  document.getElementById('password').value = "Dropshot#1";
+  document.getElementById('password').dispatchEvent(new Event('input'));
 
-//   waitForElm('#password_submit').then(() => {
-//     document.getElementById('password_submit').click();
-//   });
-// });
-  
-observer.observe(document, {
-  subtree: true,
-  attributes: true
+  waitForElm('#password_submit').then((elm) => {
+    elm.click();
+  });
 });
 
 function waitForElm(selector) {
