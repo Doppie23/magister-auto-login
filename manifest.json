@@ -1,0 +1,16 @@
+{
+    "name": "Magister auto login",
+    "description": "auto login magister.",
+    "version": "0.1",
+    "manifest_version": 3,
+    "permissions": [
+    "storage"
+    ],
+    "content_scripts": [
+        {
+         "matches": ["http://accounts.magister.net/*","https://accounts.magister.net/*"],
+         "js": ["script.js", "jquery-3.6.1.min.js"]
+        }
+       ]
+    
+  }
