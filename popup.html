@@ -13,7 +13,10 @@
     <h1>Inlog gegevens<span style="color: orange;">.</span></h1>
     <div id="inputs">
         <input type="text" class="leerlingnummer" placeholder="Gebruikersnaam">
-        <input type="password" class="wachtwoord" placeholder="Wachtwoord">
+        <div id="password-wrapper">
+            <input type="password" class="wachtwoord" placeholder="Wachtwoord">
+            <i class="far fa-eye" id="togglePassword" style="position: relative; left: -30px; cursor: pointer; color: black; z-index: 1;"></i>
+        </div>
     </div>
     <div id="savebericht"></div>
     <button id="save" class="button">Save</button>

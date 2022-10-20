@@ -41,3 +41,9 @@ input{
 .empty {
     border-color: red;
 }
+
+#password-wrapper{
+    overflow: auto;
+    position: relative;
+    left: 10px;
+}
