@@ -38,4 +38,4 @@ function waitForElm(selector) {
           subtree: true
         });
       });
-    }      
+    }

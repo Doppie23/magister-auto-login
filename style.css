@@ -43,7 +43,11 @@ input{
 }
 
 #password-wrapper{
-    overflow: auto;
     position: relative;
     left: 10px;
+}
+
+.fix-2px{
+    position: relative;
+    left: 1px;
 }
